@@ -1,0 +1,24 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Nǐhǎo
+    - Nǐhǎo!
+    
+- intent: goodbye
+  examples: |
+    - Zàijiàn
+    - Zàijiàn!
+
+- intent: introduce
+  examples: |
+    - Wǒ jiào [gao]{"entity": "name"}
+    - Wǒ jiào [xinxi]{"entity": "name"}!
+  
+
+- intent: thank_you
+  examples: |
+      - Xièxie
+      - Xièxie!
+

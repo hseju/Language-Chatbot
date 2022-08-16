@@ -1,0 +1,27 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- introduce
+- thank_you
+entities:
+- name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+responses:
+  utter_greet:
+  - text: Nǐhǎo.
+  utter_introduce:
+  - text: Nǐhǎo {name}, Wǒ jiào Ziggy.
+  utter_goodbye:
+  - text: Zàijiàn.
+  utter_thankyou_response:
+  - text: Búyòngxiè.
