@@ -1,14 +1,33 @@
 version: "3.1"
 
 stories:
-- story: P1A M1 say thank you  
+
+- story: greet_and_bye
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: introduce
-  - action: utter_introduce
   - intent: goodbye
   - action: utter_goodbye
   - intent: thank_you
   - action: utter_thankyou_response
+
+
+- story: P1A M1  
+  steps:
+  - intent: introduce
+  - action: utter_introduce
+  - intent: possession
+  - action: utter_possession
+  
+  
+  
+- story: P1A M2  
+  steps:
+  - intent: how_old
+  - action: utter_how_old
+  - intent: toy
+  - action: utter_toy
+
+
+  
   

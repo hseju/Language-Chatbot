@@ -7,21 +7,71 @@ intents:
 - goodbye
 - introduce
 - thank_you
+- possession
+- grammar_check
+- how_old
+- toy
+
 entities:
-- name
+- PERSON
+- item
+- direct
+- age
+- color_toy
+
+
 slots:
-  name:
+  PERSON:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: name
+      entity: PERSON
+
+  item:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: item
+  
+  age:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: age
+
+  direct:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: direct
+
+  color_toy:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: color_toy
+
 responses:
   utter_greet:
-  - text: Nǐhǎo.
+  - text: Nǐhǎo。
   utter_introduce:
-  - text: Nǐhǎo {name}, Wǒ jiào Ziggy.
+  - text: Nǐhǎo, Wǒ jiào Ziggy。
   utter_goodbye:
-  - text: Zàijiàn.
+  - text: Zàijiàn。
   utter_thankyou_response:
-  - text: Búyòngxiè.
+  - text: Búyòngxìe。
+  utter_possession:
+  - text: "{item} kě ài。"
+  utter_grammar:
+  - text: "I understood your sentence in Chinese. Your grammar is perfect."
+  utter_how_old:
+  - text: "Good sentence! I don't know how old I am."
+  utter_toy:
+  - text: "I love {color_toy}."
+  utter_schoolbag:
+  - text: "Wǒ méiyǒu {item}。Wǒ yǒu shūbāo。"

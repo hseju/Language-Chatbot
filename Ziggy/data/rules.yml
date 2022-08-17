@@ -2,9 +2,32 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Say grammar check done 
+condition:
+- slot_was_set:
+  - direct: "meiyou"
+steps:
+- action: utter_grammar
+
+- rule: Say grammar check done 
+condition:
+- slot_was_set:
+  - direct: "yi ge"
+steps:
+- action: utter_grammar
+
+- rule: Say I have schoolbag
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - or:
+    - slot_was_set:
+      - direct: "qiu"
+    - slot_was_set:
+      - direct: "qianbi"
+    - slot_was_set:
+      - direct: "benzi"
+  - intent: grammar_check
+  - action: utter_schoolbag
+
+  
 
 

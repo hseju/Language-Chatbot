@@ -3,22 +3,49 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - Nǐhǎo
-    - Nǐhǎo!
+    - Nihao
+    - Nihao!
     
 - intent: goodbye
   examples: |
-    - Zàijiàn
-    - Zàijiàn!
+    - Zaijian
+    - Zaijian!
 
 - intent: introduce
   examples: |
-    - Wǒ jiào [gao]{"entity": "name"}
-    - Wǒ jiào [xinxi]{"entity": "name"}!
+    - Wo jiao [hardik]{"entity":"PERSON"}
+    - wo jiao [Hardik]{"entity":"PERSON"}!
   
 
 - intent: thank_you
   examples: |
-      - Xièxie
-      - Xièxie!
+      - Xiexie
+      - Xiexie!
+      - xiesixe
+      - xiexieee
+      - xiseixie
+    
+- intent: possession
+  examples: |
+      - Wo you [mao]{"entity":"item"}.
+      - Wo you [gau]{"entity":"item"}.
 
+     
+- intent: grammar_check
+  examples: |
+      - Wo [meiyou]{"entity":"direct"} [mao]{"entity":"item"}!
+      - Wo [meiyou]{"entity":"direct"} [mao]{"entity":"item"}
+      - [yi ge]{"entity":"direct"} [qiu]{"entity":"item"}
+      - [yi ge]{"entity":"direct"} [shu bao]{"entity":"item"}
+      - [yi ge]{"entity":"direct"} [benzi]{"entity":"item"}
+
+- intent: how_old
+  examples: | 
+      - Wo [wu]{"entity":"age"} sui。
+      - Wo [shi]{"entity":"age"} sui
+      
+- intent: toy
+  examples: |
+      - Zhe shi [lanse de wanju]{"entity":"color_toy"}。
+      - Zhe shi [lanse de wanju]{"entity":"color_toy"}
+      
